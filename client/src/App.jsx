@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import ColorPalette from './components/ColorPalette';
+import CubeDisplay from './components/CubeDisplay';
+import ControlButton from './components/ControlButton';
+import RotationControls from './components/RotationControls';
+import styles from './App.module.css'; // We'll create this CSS file
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedColor, setSelectedColor] = useState('#FFFFFF'); // Default to white
+
+  const handleReset = () => {
+    console.log('Resetting cube state...');
+    // Add logic to reset the cube face colors here
+    setSelectedColor('#FFFFFF'); // Reset selected color
+  };
+
+  const handleSolve = () => {
+    console.log('Solving cube...');
+    // Add logic to trigger the solving process here
+  };
+
+  const handleRotate = (direction) => {
+    console.log(`Rotate cube: ${direction}`);
+    // Add logic to visually rotate the CubeDisplay component
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={styles.appContainer}>
+      <div className={styles.leftPanel}>
+        <h1 className={styles.title}>
+          RUBIKS CUBE <br /> SOLVER
+        </h1>
+        <ColorPalette
+          selectedColor={selectedColor}
+          onColorSelect={setSelectedColor}
+        />
+        <div className={styles.actionButtons}>
+          <ControlButton label="RESET" onClick={handleReset} />
+          <ControlButton label="SOLVE" onClick={handleSolve} />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className={styles.rightPanel}>
+        <CubeDisplay selectedColor={selectedColor} />
+        <RotationControls onRotate={handleRotate}/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

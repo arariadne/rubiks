@@ -1,0 +1,24 @@
+.controlButton {
+    background-color: #1a237e; /* Dark blue */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    min-width: 180px; /* Match palette width approx */
+  }
+  
+  .controlButton:hover {
+    background-color: #283593; /* Slightly lighter blue */
+    transform: translateY(-1px);
+  }
+  
+  .controlButton:active {
+    background-color: #3f51b5; /* Even lighter */
+    transform: translateY(0px);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
