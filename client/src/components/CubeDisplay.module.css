@@ -1,94 +1,94 @@
 .cubeContainer {
-    /* Basic container, needs perspective for 3D */
-    width: 250px; /* Adjust size */
-    height: 250px; /* Adjust size */
-    position: relative;
-     /* Add perspective if attempting 3D CSS */
-     /* perspective: 1000px; */
-     margin-bottom: 20px; /* Space above rotation controls */
-  }
-  
-  .face {
-    /* Basic face styling */
-    position: absolute; /* Needed for positioning faces */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2px; /* Gap between facelets */
-    width: 100px; /* Adjust size of individual faces */
-    height: 100px;/* Adjust size of individual faces */
-    border: 1px solid #555; /* Border for the face */
-    background-color: #eee; /* Fallback */
-  }
-  
-  .facelet {
-    /* Individual sticker */
-    width: 100%;
-    height: 100%;
-    border: 1px solid #333; /* Border for facelet */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    color: rgba(0,0,0,0.1); /* Hide text or remove later */
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-  }
-  
-  .facelet:hover {
-     transform: scale(1.05);
-     box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-     z-index: 1; /* Bring hovered facelet to front */
-  }
-  
-  /* --- START: VERY Basic Isometric Positioning --- */
-  /* This is complex and requires fine-tuning */
-  /* A JS library (three.js) is usually better for this */
-  
-  .cubeContainer {
-     width: 150px; /* Adjust overall container size for isometric */
-     height: 150px;
-     transform-style: preserve-3d; /* Needed for 3D transforms */
-      /* Rotate the whole container for a better view */
-      transform: rotateX(-20deg) rotateY(30deg);
-  }
-  
-  .face {
-    width: 150px; /* Match container size */
-    height: 150px;
-  }
-  
-  /* Example Positioning (adjust values heavily) */
-  .frontFace {
-     transform: translateZ(75px); /* Move face forward */
-  }
-  
-  .upFace {
-      transform: translateY(-75px) rotateX(90deg); /* Move up and rotate */
-  }
-  
-  .rightFace {
-      transform: translateX(75px) rotateY(90deg); /* Move right and rotate */
-  }
-  
-  /* You'd add similar rules for back, down, left faces */
-  /* --- END: Basic Isometric Positioning --- */
-  
-  
-  .instructions {
-    position: absolute;
-    bottom: -40px; /* Position below the cube area */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.9rem;
-    color: #555;
-    text-align: center;
-    width: 100%;
-  }
+  /* Basic container, needs perspective for 3D */
+  width: 250px; /* Adjust size */
+  height: 250px; /* Adjust size */
+  position: relative;
+   /* Add perspective if attempting 3D CSS */
+   /* perspective: 1000px; */
+   margin-bottom: 20px; /* Space above rotation controls */
+}
 
-     .cubeCanvasContainer {
-        width: 300px; /* Or use % */
-        height: 300px; /* Or use % */
-        background-color: #fcefee; /* Match theme */
-        margin: 20px auto; /* Center or position as needed */
-    }
+.face {
+  /* Basic face styling */
+  position: absolute; /* Needed for positioning faces */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px; /* Gap between facelets */
+  width: 100px; /* Adjust size of individual faces */
+  height: 100px;/* Adjust size of individual faces */
+  border: 1px solid #555; /* Border for the face */
+  background-color: #eee; /* Fallback */
+}
+
+.facelet {
+  /* Individual sticker */
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333; /* Border for facelet */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  color: rgba(0,0,0,0.1); /* Hide text or remove later */
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.facelet:hover {
+   transform: scale(1.05);
+   box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+   z-index: 1; /* Bring hovered facelet to front */
+}
+
+/* --- START: VERY Basic Isometric Positioning --- */
+/* This is complex and requires fine-tuning */
+/* A JS library (three.js) is usually better for this */
+
+.cubeContainer {
+   width: 150px; /* Adjust overall container size for isometric */
+   height: 150px;
+   transform-style: preserve-3d; /* Needed for 3D transforms */
+    /* Rotate the whole container for a better view */
+    transform: rotateX(-20deg) rotateY(30deg);
+}
+
+.face {
+  width: 150px; /* Match container size */
+  height: 150px;
+}
+
+/* Example Positioning (adjust values heavily) */
+.frontFace {
+   transform: translateZ(75px); /* Move face forward */
+}
+
+.upFace {
+    transform: translateY(-75px) rotateX(90deg); /* Move up and rotate */
+}
+
+.rightFace {
+    transform: translateX(75px) rotateY(90deg); /* Move right and rotate */
+}
+
+/* You'd add similar rules for back, down, left faces */
+/* --- END: Basic Isometric Positioning --- */
+
+
+.instructions {
+  position: absolute;
+  bottom: -40px; /* Position below the cube area */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  width: 100%;
+}
+
+   .cubeCanvasContainer {
+      width: 300px; /* Or use % */
+      height: 300px; /* Or use % */
+      background-color: #fcefee; /* Match theme */
+      margin: 20px auto; /* Center or position as needed */
+  }
