@@ -1,30 +1,30 @@
 .appContainer {
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: flex-start; /* Align items to the top */
+  justify-content: center; 
+  align-items: flex-start; 
   min-height: 100vh;
-  background-color: #fcefee; /* Light pink background */
+  background-color: #fcefee;
   padding: 40px;
-  gap: 50px; /* Space between left and right panels */
+  gap: 50px;
   font-family: sans-serif;
 }
 
 .leftPanel {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Space between items in left panel */
+  gap: 30px; 
 }
 
 .rightPanel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Space between cube and rotation controls */
+  gap: 20px; 
 }
 
 
 .title {
-  color: #1a237e; /* Dark blue */
+  color: #1a237e; 
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
@@ -35,4 +35,39 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.solutionArea {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f0f0; 
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  min-height: 50px; 
+  max-width: 250px; 
+  word-wrap: break-word; 
+}
+
+.solutionTitle {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 1.1rem;
+}
+
+.solutionText {
+  font-family: monospace; 
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.errorMessage {
+  color: #D32F2F; /* Red color for errors */
+  font-weight: bold;
+}
+
+/* Optional: Style for loading indicator */
+.solutionArea p {
+    color: #555;
 }
