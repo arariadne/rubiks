@@ -178,9 +178,9 @@ function App() {
         console.error("Solver Error:", error);
         setSolverError(error.message || "An error occurred during solving.");
     } finally {
-        setIsSolving(false); // Hide loading indicator
+        setIsSolving(false);
     }
-  }, [cubeState]); // Depends on the current cubeState
+  }, [cubeState]); 
 
   const handleRotate = useCallback((direction) => {
     const rotationAmount = Math.PI / 4;
@@ -193,7 +193,7 @@ function App() {
         default: return currentRotation;
       }
     });
-     setSolutionSteps(''); // Clear solution if cube is manually rotated
+     setSolutionSteps(''); 
      setSolverError('');
   }, []);
 
@@ -202,7 +202,7 @@ function App() {
     setCubeState(produce(draft => {
         if (!draft[posKey]) return;
         const currentFaceColor = draft[posKey][faceIndex];
-        if (currentFaceColor === '#333333') return; // Prevent coloring internal
+        if (currentFaceColor === '#333333') return; 
         draft[posKey][faceIndex] = selectedColor;
     }));
     setSolutionSteps(''); // Clear solution if colors are changed manually
