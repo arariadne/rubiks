@@ -46,14 +46,9 @@ const hexToFaceLetter = (hex) => {
     }
 };
 
-// --- Helper Function: Convert App State to Solver String ---
-// This is the most complex part and highly dependent on the solver's expected format.
-// cube.js typically expects a 54-character string representing the faces
-// in the order U1-U9, R1-R9, F1-F9, D1-D9, L1-L9, B1-B9.
+
 const convertStateToSolverString = (appState) => {
-    // Define the mapping from [x, y, z] coordinates and face index to the 54 sticker positions
-    // This requires careful visualization or reference. Example structure (needs completion):
-    // URFDLB order, 1-9 for each face (e.g., U1=TopLeft, U2=TopMid, U3=TopRight, U4=MidLeft...)
+  
     const faceletMap = [
         // Up Face (y=1) - Order: ULB, UB, UBR, UL, U, UR, ULF, UF, UFR (example, verify order)
         { key: "-1_1_-1", faceIndex: 2 }, { key: "0_1_-1", faceIndex: 2 }, { key: "1_1_-1", faceIndex: 2 },
@@ -133,9 +128,9 @@ function App() {
   const [cubeState, setCubeState] = useState(createInitialCubeState);
   const [cubeRotation, setCubeRotation] = useState([0, 0, 0]);
   // --- New state for solver ---
-  const [solutionSteps, setSolutionSteps] = useState(''); // To store the solution moves
-  const [isSolving, setIsSolving] = useState(false); // Loading indicator
-  const [solverError, setSolverError] = useState(''); // To store errors
+  const [solutionSteps, setSolutionSteps] = useState(''); 
+  const [isSolving, setIsSolving] = useState(false); 
+  const [solverError, setSolverError] = useState('');
 
   // --- Event Handlers ---
   const handleReset = useCallback(() => {
@@ -143,8 +138,8 @@ function App() {
     setCubeState(createInitialCubeState());
     setSelectedColor('#FFFFFF');
     setCubeRotation([0, 0, 0]);
-    setSolutionSteps(''); // Clear solution on reset
-    setSolverError(''); // Clear errors on reset
+    setSolutionSteps('');
+    setSolverError(''); 
     setIsSolving(false);
   }, []);
 
