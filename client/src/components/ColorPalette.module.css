@@ -1,8 +1,8 @@
 .palette {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 10px;
-    width: 180px; /* Adjust as needed */
+    width: 180px; 
   }
   
   .colorSquare {
@@ -19,16 +19,16 @@
   }
   
   .colorSquare.selected {
-    border: 3px solid #1a237e; /* Dark blue border for selected */
-    box-shadow: 0 0 10px rgba(26, 35, 126, 0.5); /* Glow effect */
+    border: 3px solid #1a237e; 
+    box-shadow: 0 0 10px rgba(26, 35, 126, 0.5);
     transform: scale(1.1);
   }
   
   /* Add specific border colors if white/yellow are hard to see */
-  .colorSquare[style*="backgroundColor: rgb(255, 255, 255)"] { /* White */
+  .colorSquare[style*="backgroundColor: rgb(255, 255, 255)"] { 
    border-color: #ddd;
   }
-  .colorSquare[style*="backgroundColor: rgb(255, 255, 0)"] { /* Yellow */
+  .colorSquare[style*="backgroundColor: rgb(255, 255, 0)"] { 
    border-color: #ccc;
   }
   .colorSquare[style*="backgroundColor: rgb(255, 255, 255)"].selected {
