@@ -5,11 +5,11 @@
 }
 
 .rotateButton {
-    background-color: #f5f5f5; /* Light grey */
+    background-color: #ebacd9; 
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    font-size: 1.5rem; /* Make arrows bigger */
+    font-size: 1.5rem; 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -22,10 +22,10 @@
 }
 
 .rotateButton:hover {
-    background-color: #e0e0e0;
+    background-color: #e97cd5;
 }
 
 .rotateButton:active {
-     background-color: #d5d5d5;
+     background-color: #eb48b7;
      box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
 }
